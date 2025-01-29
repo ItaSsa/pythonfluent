@@ -1,10 +1,11 @@
 import collections
 
+#To create a class without methods e.g one database record
 Card = collections.namedtuple('Card',['rank','suit'])
 
 class FrenchDeck:
     ranks = [str(n) for n in range(2,11)] + list('JQKA')
-    suits = 'spades diamonds clubs hearts'.split()
+    suits = 'diamonds clubs spades hearts' .split()
 
     def __init__(self):
         self._cards = [Card(rank,suit) for suit in self.suits
